@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">-->
+
+    <!-- font favorite icons -->
+    <script src="https://kit.fontawesome.com/3b062b1c00.js" crossorigin="anonymous"></script>
+
+    <!-- local CSS -->
+    <style type="text/css">
+        /*body {background-color: gainsboro}*/
+        table {font-family: Bahnschrift,serif; font-size:16px; color: black}
+        h1 {color: rebeccapurple; font-family: Bahnschrift,serif}
+        .float-button {position:fixed; bottom: 90px; right: 50px}
+
+    </style>
+
+    <title>Ajax Movie List</title>
+<!--    <a href="index.html">home</a>-->
+
+</head>
+
+<body  ng-controller="myCtrl">
+<nav class="navbar navbar-default navbar-dark navbar-static-top" style="background-color: #663399;">
+    <h1 class="nav-brand" style="font-family: Bahnschrift,Serif; color:white">Welcome to Fabflix</h1>
+
+    <ul class="navbar nav">
+        <li>
+            <a href="index.html" style="color: white">
+                <span class="fas fa-home" style="font-size: larger" aria-hidden="true"></span></a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <a href="shopping-cart.html" style="color: white">
+                <span class="fas fa-shopping-cart"> Cart</span>
+            </a></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <a href="login.html" style="color: white"
+            ><span class="fas fa-sign-in-alt"> Sign-in</span>
+            </a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <div>
+                <form class="form-inline" method="get" action="aglr-movie-list.html">
+                    <input name="fullSearch" type="hidden" value="True" autocomplete="off">
+                    <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <button type="submit"><span class="fas fa-search"></span></button>
+                </form></div>
+        </li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars" style="font-size: x-large" aria-hidden="true">   More</span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!--        <div><a href="dashboard.html">go to dashboard</a></div>-->
+        <form method="get" action="aglr-movie-list.html">
+            <h5 style="color: white">Advanced Search</h5>
+            <input name="search_by_filter" type="hidden" value="True" autocomplete="off">
+            <i style="color: white">title: </i><input type="TEXT" name="title">
+            <i style="color: white">year: </i><input type="TEXT" name="year">
+            <i style="color: white">director: </i><input type="TEXT" name="director">
+            <i style="color: white">starName: </i><input type="TEXT" name="starName">
+            <input type="SUBMIT" value="Go">
+            <!--        <a href="aglr-movie-list?search_by_filter=True">go</a>-->
+        </form>
+        <!--        <a href="shopping-cart.html" class="btn btn-default btn-sm">-->
+        <!--            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart-->
+        <!--        </a>-->
+        <!--        <a href="login.html" class="btn btn-secondary">Log in</a>-->
+    </div>
+</nav><!--    <header class="blog-header py-3">-->
+
+<!--<h1>{{data}}</h1>-->
+<div class="btn-group float-button btn-group-vertical" ng-controller="pageCtrl" ng-init="disable1=true;disable2=false">
+    <button type="button" class="btn btn-secondary" style="background-color: #663399" ng-click="prev()" ng-hide="pageNum <= 0" ng-disabled="disable1">Prev</button>
+<!--    <input type="text" name="{{pageNum}}" disabled>-->
+    <button type="button" class="btn btn-secondary" style=" background-color: #663399" ng-click="next()" ng-disabled="disable2">Next</button>
+    <div class="btn-group">
+        <button id="pagelmit" type="button" class="btn btn-secondary dropdown-toggle" style=" background-color: #663399" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            by
+        </button>
+        <div class="dropdown-menu">
+            <button class="dropdown-item" ng-click="turnPageLim(10)">10</button>
+            <button class="dropdown-item" ng-click="turnPageLim(25)">25</button>
+            <button class="dropdown-item" ng-click="turnPageLim(50)">50</button>
+            <button class="dropdown-item" ng-click="turnPageLim(100)">100</button>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <header class="blog-header py-3">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="blog-header-logo text-dark"> Here are the movies you are looking for </h1>
+            </div>
+            <div>
+<!--                <a href="shopping-cart.html" class="btn btn-default btn-sm">-->
+<!--                    <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart-->
+<!--                </a>-->
+            </div>
+        </div>
+    </header>
+    <div class="btn-group" role="group" ng-controller="sortCtrl">
+        <button id="sort1" type="button" class="btn btn-secondary dropdown-toggle" style=" background-color: #663399" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            First Sort by:
+        </button>
+        <div class="dropdown-menu">
+            <button class="dropdown-item" ng-click="select1('sota')">Title ↑</button>
+            <button class="dropdown-item" ng-click="select1('sotd')">Title ↓</button>
+            <button class="dropdown-item" ng-click="select1('sora')">Rating ↑</button>
+            <button class="dropdown-item" ng-click="select1('sord')">Rating ↓</button>
+        </div>
+        <div class="btn-group">
+        <button id="sort2" type="button" class="btn btn-secondary dropdown-toggle" style=" background-color: #663399" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Second Sort by:
+        </button>
+        <div class="dropdown-menu">
+            <button class="dropdown-item" ng-click="select2('sota')">Title ↑</button>
+            <button class="dropdown-item" ng-click="select2('sotd')">Title ↓</button>
+            <button class="dropdown-item" ng-click="select2('sora')">Rating ↑</button>
+            <button class="dropdown-item" ng-click="select2('sord')">Rating ↓</button>
+        </div>
+        </div>
+
+    </div>
+    <div ng-controller="addCartCtrl">
+        <div ng-repeat="movie in data">
+    <div class="card" style="margin-left:6%; width:80%; box-shadow: 0px 3px 5px #b9bbcf">
+<!--        <div class="card-header">-->
+<!--        <a href="single-movie.html?id={{movie.id}}" class="card-title">{{movie.title}}</a>-->
+<!--        </div>-->
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                <div class="col-8">
+                    <a href="single-movie.html?id={{movie.id}}" style="font-family: Bahnschrift,Serif;font-size: X-large;color: rebeccapurple;">{{movie.title}}</a>
+                    <p class="card-subtitle">{{movie.year}},&nbsp;{{movie.director}}</p>
+                    <div class="row">
+                        <div class="col-6">
+                        <li ng-repeat="g in movie.genres">
+                            <a href="aglr-movie-list.html?browse_by_genre=True&genre={{g}}">{{g}}</a>
+                        </li>
+                        </div>
+                            <div class="col-6">
+                                <li ng-repeat="s in movie.stars">
+                                    <a href="single-star.html?id={{s.id}}">{{s.name}}</a>
+                                </li>
+                            </div>
+                </div>
+                </div>
+                    <div class="col-4">
+                        <h1>{{movie.rating}}</h1>
+                    </div>
+            </div>
+        </div>
+                <button type="button" class="btn float-right" ng-click="addToCart(movie.title, movie.id)">
+                    <span class="fas fa-cart-plus"></span>
+                </button>
+
+    </div>
+
+</div>
+            <br> </br>
+        </div>
+<!--        <div *ngIf="showCfm" class="modal fade" id="cfmModal" tabindex="-1">-->
+<!--            <div class="modal-dialog modal-dialog-centered" role="document">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                        <h5 class="modal-title" id="exampleModalLongTitle">Congratulations! </h5>-->
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                            <span aria-hidden="true">&times;</span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body">-->
+<!--                        Successfully Add to Cart.-->
+<!--                    </div>-->
+<!--                    <div class="modal-footer">-->
+<!--                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<!-- Load our own JS file -->
+
+<script src="aglr-movie-list.js"></script>
+</body>
+
+
+</html>

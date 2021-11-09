@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">-->
+
+    <!-- font favorite icons -->
+    <script src="https://kit.fontawesome.com/3b062b1c00.js" crossorigin="anonymous"></script>
+
+    <!-- local CSS -->
+    <style type="text/css">
+        /*body {background-color: gainsboro}*/
+        div.movie-id {font-family: "Harlow Solid Italic"}
+ </style>
+    <title>Single Movie</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-dark navbar-static-top" style="background-color: #663399;">
+    <h1 class="nav-brand" style="font-family: Bahnschrift,Serif; color:white">Welcome to Fabflix</h1>
+
+    <ul class="navbar nav">
+        <li>
+            <a href="index.html" style="color: white">
+                <span class="fas fa-home" style="font-size: larger" aria-hidden="true"></span></a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <a href="shopping-cart.html" style="color: white">
+                <span class="fas fa-shopping-cart"> Cart</span>
+            </a></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <a href="login.html" style="color: white"
+            ><span class="fas fa-sign-in-alt"> Sign-in</span>
+            </a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <div>
+                <form class="form-inline" method="get" action="aglr-movie-list.html">
+                    <input name="fullSearch" type="hidden" value="True" autocomplete="off">
+                    <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <button type="submit"><span class="fas fa-search"></span></button>
+                </form></div>
+        </li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars" style="font-size: x-large" aria-hidden="true">   More</span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!--        <div><a href="dashboard.html">go to dashboard</a></div>-->
+        <form method="get" action="aglr-movie-list.html">
+            <h5 style="color: white">Advanced Search</h5>
+            <input name="search_by_filter" type="hidden" value="True" autocomplete="off">
+            <i style="color: white">title: </i><input type="TEXT" name="title">
+            <i style="color: white">year: </i><input type="TEXT" name="year">
+            <i style="color: white">director: </i><input type="TEXT" name="director">
+            <i style="color: white">starName: </i><input type="TEXT" name="starName">
+            <input type="SUBMIT" value="Go">
+            <!--        <a href="aglr-movie-list?search_by_filter=True">go</a>-->
+        </form>
+        <!--        <a href="shopping-cart.html" class="btn btn-default btn-sm">-->
+        <!--            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart-->
+        <!--        </a>-->
+        <!--        <a href="login.html" class="btn btn-secondary">Log in</a>-->
+    </div>
+</nav>
+
+<div class="container">
+<header class="blog-header py-3">
+    <div class="row">
+        <div class="col text-center">
+            <h1 style="font-family: Bahnschrift,Serif"> All about the movie ... </h1>
+<!--            <a href="shopping-cart.html" class="btn btn-default btn-sm">-->
+<!--                <span class="fas fa-shopping-cart"></span> Shopping Cart-->
+<!--            </a>-->
+        </div>
+    </div>
+</header>
+<!--<h1>Single Movie Page</h1>-->
+<div class="row" style="background-color: #f4fcff">
+    <div class="col">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <div id="movie_info"></div>
+                <div id="movie_table_body"></div>
+                <div class="text-right">
+                    <button id="smAddCartBtn" type="button" class="btn float-right">
+                        <span class="fas fa-cart-plus"></span>
+                    </button>
+                    <button id="backBtn" class="btn html-editor-align-right">
+                        <span class="fas fa-step-backward"></span>
+                    </button>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <!--<h3 id="movie_info"></h3>-->
+<!--<table id=movie_table class="table table-striped">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>star</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody id=movie_table_body></tbody>-->
+<!--</table>-->
+</div>
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+
+<script src="single-movie.js"></script>
+</body>
+
+
+</html>

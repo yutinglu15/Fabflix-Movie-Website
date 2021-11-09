@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Angular JS -->
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- local CSS -->
+    <style type="text/css">
+        body {background-color: gainsboro}
+        table {font-family: Bahnschrift,serif; font-size:16px; color: black}
+        h1 {color: rebeccapurple; font-family: Bahnschrift,serif}
+        .float-button {position:fixed; bottom: 90px; right: 50px;}
+
+    </style>
+
+    <title>Ajax Movie List</title>
+</head>
+
+<body>
+<!--<h1>{{data}}</h1>-->
+<div class="container">
+    <header class="blog-header py-3">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="blog-header-logo text-dark">Payment</h1>
+            </div>
+            <div>
+                <a href="shopping-cart.html" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="text-center">
+        <h4 class="mb-3">Billing Information</h4>
+        <h4 id="totalNum"></h4>
+
+        <form id="payment_form" class="needs-validation" method="post" action="#">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+<!--                    <label for="firstName">First name</label>-->
+                    <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+<!--                    <label for="lastName">Last name</label>-->
+                    <input type="text" class="form-control" name="lastName" placeholder="Last Name"required>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+<!--                <label for="cc-number">Credit card number</label>-->
+                <input type="text" class="form-control" name="cc-number" placeholder="CardNumber" required>
+                <div class="invalid-feedback">
+                    Credit card number is required
+                </div>
+            </div>
+            <div class="col-md-12">
+<!--                <label for="cc-expiration">Expiration</label>-->
+                <input type="text"class="form-control" name="cc-expiration" placeholder="Expiration" required>
+                <div class="invalid-feedback">
+                    Expiration date required
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <button id="checkOutBtn" class="btn btn-primary btn-lg btn-block" type="submit" data-toggle="modal" data-target="#myModal">Continue to checkout</button>
+        </form>
+    </div>
+<!--    <div id="confirm">-->
+<!--    </div>-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Payment Results</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="confirm">Default</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<!-- Load our own JS file -->
+
+<script src="payment-page.js"></script>
+</body>
+
+
+</html>

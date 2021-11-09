@@ -1,0 +1,23 @@
+show war
+ls -lah /home/ubuntu/tomcat/webapps/
+
+remove war
+rm /home/ubuntu/tomcat/webapps/*.war
+
+copy *.war
+cp target/*.war /home/ubuntu/tomcat/webapps/
+
+instance 1 public IP:
+18.218.240.96
+
+google cloud instance 1 public IP:
+35.224.4.207
+
+route:
+sudo vim /etc/apache2/sites-enabled/000-default.conf
+
+restart:
+sudo service apache2 restart
+
+show tomcat log:
+tail -f tomcat/logs/*

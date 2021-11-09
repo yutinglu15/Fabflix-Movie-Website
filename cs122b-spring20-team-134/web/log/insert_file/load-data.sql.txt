@@ -1,0 +1,20 @@
+LOAD DATA LOCAL INFILE 'insert_movie.txt' INTO TABLE movies FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n'; 
+
+LOAD DATA LOCAL INFILE 'insert_genre.txt' INTO TABLE genres FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' (name); 
+
+LOAD DATA LOCAL INFILE 'insert_rating.txt' INTO TABLE ratings FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n'; 
+
+LOAD DATA LOCAL INFILE 'insert_gim.txt' INTO TABLE genres_in_movies FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n'; 
+
+LOAD DATA LOCAL INFILE 'insert_star.txt' INTO TABLE stars FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' 
+(id, name, @vbirthYear)
+SET birthYear = nullif(@vbirthYear, -1); 
+
+LOAD DATA LOCAL INFILE 'insert_sim.txt' INTO TABLE stars_in_movies FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n'; 
+
+# insert into creditcards(id, firstName, lastName, expiration) values('123'
+#, 'a','a', '2020-01-01');
+
+# insert into customers(firstName, lastName, ccId, address, email, password
+# ) values('a', 'a', '123', 'some','test', 'a1');
+

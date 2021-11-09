@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash Board</title>
+</head>
+<h1>Admin control</h1>
+<div><a href="index.html">Go to Index.html</a></div>
+<body>
+
+<div>
+<form id="insertStars" method="post" action ="#">
+    <label>New star</label>
+    <input name="name" placeholder="Enter star name" type="text" required>
+    <input name="dob" placeholder="Enter birth year"  type="text">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+</form>
+</div>
+<div>
+<form id="insertMovies" method="post" action ="#">
+    <label>New Movies</label>
+    <input name="title" placeholder="Enter title" type="text" required>
+    <input name="year" placeholder="Enter year" type="number" required>
+    <input name="director" placeholder="Enter director" type="text" required>
+    <input name="star_name" placeholder="Enter star name" type="text" required>
+    <input name="genre" placeholder="Enter genre" type="text" required>
+    <button class="btn btn-lg btn-primary" type="submit">Add</button>
+</form>
+</div>
+
+
+<label>Choose a table:</label>
+<form id="showTables" method="post" action = "#">
+    <select name="tables">
+        <option value="creditcards">creditcards</option>
+        <option value="customers">customers</option>
+        <option value="customers_backup">customers_backup</option>
+        <option value="employees">employees</option>
+        <option value="genres">genres</option>
+        <option value="genres_in_movies">genres_in_movies</option>
+        <option value="movies">movies</option>
+        <option value="ratings">ratings</option>
+        <option value="sales">sales</option>
+        <option value="stars">stars</option>
+        <option value="stars_in_movies">stars_in_movies</option>
+    </select>
+        <button class="btn btn-lg btn-primary" type="submit">show</button>
+</form>
+<div id="metadatafield" style="float: left"></div>
+<div id="metadatatype"  style="float: left"></div>
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="dashboard.js"></script>

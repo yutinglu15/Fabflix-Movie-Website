@@ -1,0 +1,53 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- local CSS -->
+    <style type="text/css">
+        /*body {background-color: gainsboro}*/
+
+    </style>
+    <title>Admin Login</title>
+</head>
+<body class="text-center">
+<h2>Welcome to Fablix</h2>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+<form id="login_form" class="form-signin" method="post" action="#">
+    <h1 class="h3 mb-3 font-weight-normal">Admin login</h1>
+    <div><a href = "login.html">login as customer</a></div>
+    <label class="sr-only">Username</label>
+    <label>
+        <input name="username" placeholder="Enter Username" type="text" class="form-control">
+
+        <label class="sr-only">Password</label>
+        <label>
+            <input name="password" placeholder="Enter Password" class="form-control" type="password">
+        </label>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Sign in</button>
+        <div class="g-recaptcha" data-sitekey="6LeEHvQUAAAAAGlK1_Y4sR89g9MmQ40q_ZOIB-1P"></div>
+</form>
+
+<div id="login_error_message"></div>
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="dashboard-login.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</body>
+</html>

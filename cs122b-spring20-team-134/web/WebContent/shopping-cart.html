@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cartApp">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- local CSS -->
+    <style type="text/css">
+        /*body {background-color: gainsboro}*/
+        table {font-family: Bahnschrift,serif; font-size:16px; color: black}
+        h1 {color: rebeccapurple; font-family: Bahnschrift,serif}
+        .float-button {position:fixed; bottom: 90px; right: 50px;}
+
+    </style>
+    <title>Shopping Cart</title>
+</head>
+<body ng-controller="cartCtrl">
+
+<div class="container">
+    <header class="blog-header py-3">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="blog-header-logo text-dark"> Shopping Cart</h1>
+<!--                <h1>{{cart}}</h1>-->
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col" class="text-center">Quantity</th>
+                        <th scope="col" class="text-right">Price</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+                    <tbody  ng-controller="quantityCtrl">
+                    <tr ng-repeat="(itemId,item) in cart">
+                        <td>{{item.title}}</td>
+                        <td>
+
+                            <div class="input-group">
+          <div class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" ng-click="minusItem(itemId)" ng-disabled="cart[itemId].quantity <= 1" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </div>
+
+                            <input type="text" class="form-control" value="{{cart[itemId].quantity}}" disabled>
+                            <div class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" ng-click="plusItem(itemId)" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </div>
+                        </div></td>
+
+                        <td class="text-right">{{cart[itemId].price}}</td>
+                        <td class="text-right"><button type="button" class="btn btn-sm btn-danger" ng-click="delItem(itemId)"><span class="fa fa-trash"></span>
+                        </button> </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-lg btn-block">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <a href="payment-page.html" class="button btn-lg btn-light btn-block" style="background-color: rebeccapurple; color: white; text-align: center">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+
+<script src="shopping-cart.js"></script>
+</body>
+</html>

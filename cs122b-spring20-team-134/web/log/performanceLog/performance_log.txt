@@ -1,0 +1,152 @@
+#### Test 1 ########################
+#### Naive Solution ################
+
+main
+
+running time: 116s
+finish parsing Main File
+
+total running time: 127s
+task running time: 11s
+finish parsing Actor File
+
+total running time: 451s
+task running time: 324s
+finish parsing Cast File
+
+
+#### Test 2 ########################
+#### Using hashmap to optimize #####
+
+main
+
+running time: 62s
+finish parsing Main File
+
+total running time: 76s
+task running time: 14s
+finish parsing Actor File
+
+total running time: 138s
+task running time: 61s
+finish parsing Cast File
+
+##################################
+test using small database
+HashMap Optimization
+##################################
+
+498380
+MovieId Map size: 12021
+running time: 60s
+finish parsing Main File
+
+1459257
+starId Map size: 6838
+total running time: 71s
+task running time: 11s
+finish parsing Actor File
+
+total running time: 128s
+task running time: 56s
+finish parsing Cast File
+
+=================================
++----------+
+| count(*) |
++----------+
+|    12298 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> ^C
+mysql> select count(*) from stars;
++----------+
+| count(*) |
++----------+
+|     7118 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from stars_in_movies;
++----------+
+| count(*) |
++----------+
+|    29793 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select count(*) from genres_in_movies;
++----------+
+| count(*) |
++----------+
+|     9817 |
+
+mysql> select count(*) from genres;
++----------+
+| count(*) |
++----------+
+|       36 |
++----------+
+
+===============================================
+
+###############################################
+ using data load optimization
+ main
+ 499469
+ MovieId Map size: 12021
+ running time: 0s
+ finish parsing Main File
+
+ 9422830
+ starId Map size: 6838
+ total running time: 0s
+ task running time: 0s
+ finish parsing Actor File
+
+ total running time: 1s
+ task running time: 0s
+ finish parsing Cast File
+
+ =============================
+ mysql> select count(*) from genres_in_movies;
+ +----------+
+ | count(*) |
+ +----------+
+ |    23477 | 15615
+ +----------+
+ 1 row in set (0.01 sec)
+
+ mysql> select count(*) from genres;
+ +----------+
+ | count(*) |
+ +----------+
+ |       35 |
+ +----------+
+ 1 row in set (0.00 sec)
+
+ mysql> select count(*) from stars;
+ +----------+
+ | count(*) |
+ +----------+
+ |    61675 | 60150
+ +----------+
+ 1 row in set (0.01 sec)
+
+ mysql> select count(*) from stars_in_movies;
+ +----------+
+ | count(*) |
+ +----------+
+ |    96882 | 79921
+ +----------+
+ 1 row in set (0.03 sec)
+
+ mysql> select count(*) from movies;
+ +----------+
+ | count(*) |
+ +----------+
+ |    19751 | 9052
+ +----------+
+ 1 row in set (0.01 sec)
+================================================

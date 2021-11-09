@@ -1,0 +1,56 @@
+Repeat Movie Entry , Details: Movie: id=, fid=Z0220, title=Romeo and Juliet, year=1908, director=Unknown2, genres=, Romance, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=Z0230, title=Romeo and Juliet, year=1908, director=Unknown2, genres=, Romance, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=Z0250, title=Romeo and Juliet, year=1911, director=Unknown2, genres=, Romance, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=Z0270, title=Romeo and Juliet, year=1916, director=Unknown2, genres=, Romance, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=JuD11, title=La Fin de Jour, year=1939, director=Duvivier, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=GCt30, title=The Rat, year=1927, director=Cutts, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=FNm10, title=Doctor Jack, year=1922, director=Newmeyer, genres=, Comedy, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=MLR25, title=Waterloo Bridge, year=1940, director=M.LeRoy, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=VrS40, title=Evergreen, year=1934, director=V.Saville, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=LB9, title=El grand cavalcodos, year=-1, director=Bunuel, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=RdR64, title=Topper Returns, year=1941, director=delRuth, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=OP13, title=Forever Amber, year=1947, director=Preminger, genres=, Drama, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=PaJ2, title=Ferry Pilot, year=1941, director=P.Jackson, genres=, Documentary, Drama, stars=
+Empty movie title , Details: Movie: id=, fid=JD7, title=, year=-1, director=Dassin, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=MiG7, title=Crime Doctor's Strangest Case, year=1943, director=M.Gordon, genres=, Crime, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=CoB1, title=The Seventh Veil, year=1945, director=Bennett, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=WS45, title=Catherine of Russia, year=-1, director=W.Staudte, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=NR1, title=They Live By Night, year=1947, director=N.Ray, genres=, Drama, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=Z04120, title=As Young as You Feel, year=1951, director=Unknown4, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=WlJ10, title=, year=-1, director=W.Jackson, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=CMk30, title=The Koumiko Mystery, year=1965, director=Marker, genres=, stars=
+Wrong Year Value 199x, Details: Movie: id=, fid=AS22, title=Morgan Stewart's Coming Home, year=-1, director=Alan~Smithee, genres=, stars=
+Wrong Year Value 199x, Details: Movie: id=, fid=AS32, title=Raging Angels, year=-1, director=Alan~Smithee, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=GeP45, title=, year=-1, director=Pollock, genres=, stars=
+Empty genres , Details: Movie: id=, fid=SS4, title=Savage, year=1972, director=Spielberg, genres=, stars=
+Empty genres , Details: Movie: id=, fid=DPo2, title=Stand Up, Nigel Barton, year=1965, director=D.Potter, genres=, stars=
+Empty genres , Details: Movie: id=, fid=DPo4, title=Follow the Yellow Brick Road, year=1972, director=D.Potter, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=GxR10, title=, year=-1, director=G.Reinhardt, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=GxR10, title=, year=-1, director=G.Reinhardt, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=JaS13, title=The Dark Pool, year=1963, director=Smight, genres=, Thriller, stars=
+Wrong Year Value 199x, Details: Movie: id=, fid=RHd2, title=Stop Train 349, year=-1, director=Haedrich, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=KRu25, title=Rainbow, year=1989, director=K.Russell, genres=, Drama, stars=
+Wrong Year Value 199x, Details: Movie: id=, fid=IAv12, title=Karate Kid, year=-1, director=J.G.Avildsen, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=RWF7, title=The American Soldier, year=1970, director=Fassbinder, genres=, stars=
+Wrong Year Value 196x, Details: Movie: id=, fid=MS0, title=The Eternal City, year=-1, director=Scorsese, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=WiW30, title=Buena Vista Social Club, year=-1, director=Wenders, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=DLy25, title=Mulholland Drive, year=-1, director=D.Lynch, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=MLt15, title=, year=-1, director=M.Lester, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=FOR12, title=Scream Queen Hot Tub Party, year=1984, director=F.O.Ray, genres=, Adult, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=PAl4, title=Matador, year=1985, director=Almodovar, genres=, Comedy, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=BLe5, title=Tin Men, year=1987, director=B.Levinson, genres=, Comedy, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=KaK10, title=Another Way, year=1982, director=? [Makk, genres=, Thriller, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=AEy13, title=Sarabande, year=-1, director=Egoyan, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=LeN10, title=The Good Mother, year=1988, director=Nimoy, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=BSi3, title=, year=-1, director=Silberling, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=BS6, title=For Love or Money, year=1993, director=Sonnenfeld, genres=, Comedy, Romance, stars=
+Wrong Year Value 199x, Details: Movie: id=, fid=CsS15, title=Fairy Tale: A True Story, year=-1, director=Sturridge, genres=, stars=
+Empty movie film id , Details: Movie: id=, fid=, title=, year=-1, director=T.Robbins, genres=, stars=
+Empty movie title , Details: Movie: id=, fid=KDo1x, title=, year=-1, director=Dowling, genres=, stars=
+Wrong Year Value 199x, Details: Movie: id=, fid=KDo1x, title=, year=-1, director=Dowling, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=TdC13, title=Jerry and Tom, year=-1, director=diCillo, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=Z9590, title=The Shanghai Triad, year=-1, director=UnYear95, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=AbK15, title=Taste of Cherry, year=-1, director=Kiarostami, genres=, stars=
+Wrong Year Value 19yy, Details: Movie: id=, fid=MJu15, title=All is Routine, year=-1, director=M.Judge, genres=, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=NtB10, title=On the Ropes, year=1999, director=Burstein, genres=, Documentary, stars=
+Repeat Movie Entry , Details: Movie: id=, fid=PSv10, title=Metroland, year=1999, director=P.Saville, genres=, stars=

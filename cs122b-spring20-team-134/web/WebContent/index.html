@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Using jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">-->
+
+    <!-- font favorite icons -->
+    <script src="https://kit.fontawesome.com/3b062b1c00.js" crossorigin="anonymous"></script>
+
+    <!-- local CSS -->
+    <style type="text/css">
+        /*body {background-color: gainsboro}*/
+
+        .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+        .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+        .autocomplete-selected { background: #F0F0F0; }
+        .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+        .autocomplete-group { padding: 2px 5px; }
+        .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+        /*html, body {*/
+        /*    height: 100%;*/
+        /*    width: 100%;*/
+        /*    margin: 0;*/
+        /*}*/
+
+        /*.container {*/
+        /*    height: 100%;*/
+        /*    width: 100%;*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*}*/
+
+        .autocomplete-searchbox {
+            height: 50px;
+            width: 600px;
+        }
+    </style>
+
+
+    <title>Welcome to Fabflix</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-dark navbar-static-top" style="background-color: #663399;">
+    <h1 class="nav-brand" style="font-family: Bahnschrift,Serif; color:white">Welcome to Fabflix</h1>
+
+    <ul class="navbar nav">
+        <li>
+            <a href="index.html" style="color: white">
+            <span class="fas fa-home" style="font-size: larger" aria-hidden="true"></span></a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+        <a href="shopping-cart.html" style="color: white">
+        <span class="fas fa-shopping-cart"> Cart</span>
+    </a></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+    <a href="login.html" style="color: white"
+    ><span class="fas fa-sign-in-alt"> Sign-in</span>
+    </a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li>
+            <div>
+            <form class="form-inline" method="get" action="aglr-movie-list.html">
+                <input name="fullSearch" type="hidden" value="True" autocomplete="off">
+                <input class="autocomplete-searchbox form-control mr-sm-2" type="search" id="autocomplete" name="q" placeholder="Search" aria-label="Search">
+                <button type="submit"><span class="fas fa-search"></span></button>
+            </form></div>
+        </li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars" style="font-size: x-large" aria-hidden="true">   More</span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!--        <div><a href="dashboard.html">go to dashboard</a></div>-->
+        <form method="get" action="aglr-movie-list.html">
+            <h5 style="color: white">Advanced Search</h5>
+            <input name="search_by_filter" type="hidden" value="True" autocomplete="off">
+            <i style="color: white">title: </i><input type="TEXT" name="title">
+            <i style="color: white">year: </i><input type="TEXT" name="year">
+            <i style="color: white">director: </i><input type="TEXT" name="director">
+            <i style="color: white">starName: </i><input type="TEXT" name="starName">
+            <input type="SUBMIT" value="Go">
+            <!--        <a href="aglr-movie-list?search_by_filter=True">go</a>-->
+        </form>
+<!--        <a href="shopping-cart.html" class="btn btn-default btn-sm">-->
+<!--            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart-->
+<!--        </a>-->
+<!--        <a href="login.html" class="btn btn-secondary">Log in</a>-->
+    </div>
+</nav>
+
+
+<div class="container" style="padding-top:70px">
+
+    <div class="row">
+<!--        <div class="col-4">-->
+            <ul class="nav nav-tabs " id="myTab">
+                <li class="nav-item">
+                    <a class="nav-link active" id="genre-list" data-toggle="tab" href="#genre">Browse by genre </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="char-list" data-toggle="tab" href="#char">Browse by title </a>
+            </li>
+                <li class="nav-item">
+<!--                    <a class="nav-link" id="num-list" data-toggle="tab" href="#num">Browse by numbers</a>-->
+<!--                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>-->
+            </li></ul>
+        </div>
+        <div class="row">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="genre" role="tabpanel"></div>
+                <div class="tab-pane fade" id="char" role="tabpanel"></div>
+<!--                <div class="tab-pane fade" id="num" role="tabpanel" aria-labelledby="list-messages-list">num</div>-->
+<!--                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>-->
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<!-- Load our own JS file -->
+
+<script src="index.js"></script>
+
+<!-- include jquery autocomplete JS  -->
+
+</body>
+
+
+</html>
